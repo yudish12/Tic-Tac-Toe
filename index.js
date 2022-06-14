@@ -33,10 +33,11 @@ const check = ()=>{
         [0, 4, 8, 5, 15, 45],
         [2, 4, 6, 5, 15, 135],
 ]
-
+let y = true;
 wins.forEach(e=>{
     if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "") ){
         document.querySelector('.info').innerText = boxtext[e[0]].innerText + " Won"
+         y = false;
         gameover.play();
       isgameover = true;
       document.getElementsByTagName('img')[0].style.width = ("200px");
@@ -48,7 +49,7 @@ wins.forEach(e=>{
     }
     //check for draw
     const x = drawfunc();
-    if(x==9){
+    if(x==9 && y===true){
         document.querySelector('.info').innerText = "Match Draw"
         gameover.play();
       isgameover = true;
