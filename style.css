@@ -90,11 +90,7 @@ header{
     position: absolute;
     left: -95px;
 }
-
-footer{
-    display: flex;
-    
-}
+ 
 @media (max-width: 1600px) and (min-width:1100px) {
 .line{
     left: -65px;
@@ -108,7 +104,7 @@ footer{
 }
 
 
-@media (max-width: 750px) and (min-width:200px){
+@media (max-width: 750px) and (min-width:500px){
     .container{
         flex-direction: column;
         margin-left: 2rem;
@@ -135,5 +131,31 @@ footer{
         padding: 8px 12px;
     }
 }
-
+@media (max-width: 500px) and (min-width:200px){
+    .container{
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+    header{
+        font-size: 13px;
+    }
+    .box{
+      font-size: 30px;
+    }
+    .gameinfo{
+        font-size: 12px;
+        margin-left: 4.5rem;
+        margin-top: 2rem;
+    }
+    .board{
+        margin-left: 8rem;
+    }
+    .line{
+        left: -20px;
+    }
+    #reset{
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+}
 
